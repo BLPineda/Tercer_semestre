@@ -4,6 +4,8 @@
  */
 package segunda_clase;
 
+import java.util.Scanner;
+
 /**
  *
  * @author lenin
@@ -13,11 +15,16 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-
+    
+    static int radio;
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         Operaciones_TAD opera = new Operaciones_TAD();
         
-        opera.inicio();
+        System.out.println("Ingrese el radio de su esfera");
+        radio = sc.nextInt();
+        
+        opera.muestra_de_valores();
     }
     
 }

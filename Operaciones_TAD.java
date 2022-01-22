@@ -5,23 +5,23 @@
 package segunda_clase;
 
 import java.util.Scanner;
+import java.lang.Math;
 
 /**
  *
  * @author lenin
  */
-public class Operaciones_TAD {
+public class Operaciones_TAD extends Main{
 
+    public Operaciones_TAD(int radio) {
+    }
+    
     public Operaciones_TAD() {
     }
     
-    static Double pi = 3.1416;
-    static int radio;
     static Scanner sc = new Scanner(System.in);
         
-        public void inicio(){
-            System.out.println("Ingrese el radio de su esfera");
-            radio = sc.nextInt();
+        public void muestra_de_valores(){
             System.out.println("--------------------------------------");
             System.out.println("El área es: \n");
             area();
@@ -36,28 +36,20 @@ public class Operaciones_TAD {
             volumen();
         }
         public void area(){
-            Double area = 4*pi*(radio*radio);
+            Double area = 4* Math.PI *(radio*radio);
             System.out.println(area);
     }
 
         public void circunferencia (){
-            Double circunferencia = pi*(radio*2);
+            Double circunferencia = Math.PI *(radio*2);
             System.out.println(circunferencia);
         }
         
         public void volumen(){
-            Double volumen = (4/3)*pi*((radio*radio)*radio);
+            Double volumen = (4/3)* Math.PI * Math.pow(radio, radio);
             System.out.println(volumen);
         }
         
-    public static Double getPi() {
-        return pi;
-    }
-
-    public static void setPi(Double pi) {
-        Operaciones_TAD.pi = pi;
-    }
-
     public static int getRadio() {
         return radio;
     }
